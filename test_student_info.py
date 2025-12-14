@@ -1,9 +1,11 @@
-from student_info import student_info
+from student import student_details
 
-def test_student_info():
-    result = student_info("Daksha", 186, "BCA", 98)
-    expected = "Student Name: Daksha, Roll No: 186, Course: BCA, Marks: 98"
+def test_student_details():
+    expected_output = (
+        "Student ID: S101\n"
+        "Student Name: Ananya\n"
+        "Course: BCA\n"
+        "Marks: 88"
+    )
 
-    print(result)   
-
-    assert result == expected
+    assert student_details("S101", "Ananya", "BCA", 88) == expected_output
